@@ -178,13 +178,16 @@ export default function Home() {
           <ul>
             <li><span>✓</span> A personalized list of people to catch up with</li>
             <li><span>✓</span> A different reminder frequency for each person</li>
-            <li><span>✓</span> Upcoming birthdays, anniversaries, and special days</li>
-            <li><span>✓</span> A visual garden that grows as bonds strengthen</li>
+            <li><span>✓</span> Birthdays, anniversaries &amp; milestones</li>
+            <li><span>✓</span> A garden that grows with every bond</li>
+            <li className="context-prompt">
+              <span>✓</span>
+              <div>
+                <strong>Contextual prompts for every relationship</strong>
+                <small>Ask grandparents about their health, family stories, or life advice; remember big trips and graduations with friends; and find conversation starters about the kids.</small>
+              </div>
+            </li>
           </ul>
-          <div className="context-note">
-            <strong>Prompts that understand the relationship</strong>
-            <p>For grandparents, Bloom might suggest asking about their health, hearing a family story, or seeking life advice. For friends, it can surface the anniversary of a big trip or graduation. For people with children, it can suggest conversation starters about the kids.</p>
-          </div>
         </div>
         <div className="app-window" aria-label="Bloom app preview">
           <div className="app-topbar"><BloomMark small /><span>Tuesday, May 9</span><button aria-label="Notifications">♢</button></div>

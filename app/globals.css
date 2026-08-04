@@ -124,9 +124,10 @@ h1 em, h2 em { color: var(--coral); font-style: normal; }
 
 .product { min-height: 760px; border-radius: 44px; background: #293b32; color: var(--paper); display: grid; grid-template-columns: .82fr 1.18fr; align-items: center; gap: 70px; padding: 75px 75px 0; overflow: hidden; }
 .section-label.light { color: #dbe3d9; margin-bottom: 44px; }.product h2 em { color: #f1b84d; }.product-copy > p { color: #c8d1c8; font-size: 16px; }.product ul { padding: 0; list-style: none; margin: 30px 0 0; display: grid; gap: 15px; }.product li { display: flex; gap: 12px; align-items: center; font-size: 14px; font-weight: 700; }.product li span { width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; background: var(--coral); font-size: 12px; }
-.context-note { margin-top: 30px; padding: 20px 22px; border: 1px solid rgba(255,255,255,.14); border-radius: 20px; background: rgba(255,255,255,.06); }
-.context-note strong { display: block; color: #f6d17c; font-family: "Arial Rounded MT Bold", "Trebuchet MS", sans-serif; font-size: 15px; line-height: 1.25; }
-.context-note p { margin: 9px 0 0; color: #d5ddd5; font-size: 12px; line-height: 1.6; }
+.product li.context-prompt { align-items: flex-start; }
+.context-prompt > div { flex: 1; padding-top: 2px; }
+.context-prompt strong { display: block; color: #f6d17c; line-height: 1.3; }
+.context-prompt small { display: block; margin-top: 7px; color: #d5ddd5; font-size: 12px; font-weight: 400; line-height: 1.55; }
 .app-window { align-self: end; background: #f4eddf; color: var(--ink); border-radius: 38px 38px 0 0; padding: 24px; width: min(100%, 530px); min-height: 650px; box-shadow: 0 0 0 10px rgba(255,255,255,.1), 0 0 0 11px rgba(0,0,0,.15); }
 .app-topbar { display: flex; align-items: center; justify-content: space-between; font-size: 11px; font-weight: 700; padding: 0 5px 20px; }.app-topbar button { width: 34px; height: 34px; border: 0; border-radius: 50%; background: #eadfd0; }
 .app-greeting { min-height: 210px; border-radius: 25px; background: #f6cfb1; padding: 28px; display: flex; justify-content: space-between; align-items: center; overflow: hidden; }.app-greeting > div:first-child { position: relative; z-index: 3; }.app-greeting span { font-size: 9px; font-weight: 900; letter-spacing: .12em; }.app-greeting h3 { font-family: "Arial Rounded MT Bold", "Trebuchet MS", sans-serif; font-size: 28px; line-height: 1.05; letter-spacing: -.04em; margin: 12px 0 0; }.mascot-small { position: relative; width: 155px; height: 160px; flex: 0 0 155px; right: -10px; bottom: -17px; }.mascot-small .mascot-body { inset: 25px 3px 3px; }.mascot-small .eye { width: 8px; height: 12px; top: 53px; }.mascot-small .eye-left{left:43px}.mascot-small .eye-right{right:43px}.mascot-small .smile{top:70px;width:18px;height:9px;margin-left:-9px;border-width:3px}.mascot-small .arm{width:38px;height:62px;top:82px}.mascot-small .mascot-shadow{width:130px;height:21px;left:12px}.mascot-small .mascot-sprout{height:35px}.mascot-small .mascot-sprout i{width:22px;height:13px}.mascot-small .mascot-body::before{width:28px;height:30px;left:31px}.mascot-small .mascot-body::after{width:35px;height:32px;right:30px}
@@ -154,11 +155,11 @@ h1 em, h2 em { color: var(--coral); font-style: normal; }
   .mascot-image-hero{width:285px;height:285px;right:-25px;bottom:-18px}
   .intro { grid-template-columns: 1fr; padding-top: 75px; padding-bottom: 65px; gap: 30px; }.feature-intro{grid-template-columns:1fr;padding-top:85px;padding-bottom:55px;gap:28px}.intro-copy p{font-size:16px}.feed-points{grid-template-columns:1fr;margin-top:24px}
   .features{grid-template-columns:1fr;gap:14px;padding-bottom:90px}
-  .feature-card,.feature-card:last-child{position:relative;grid-column:auto;display:grid;grid-template-columns:112px minmax(0,1fr);grid-template-rows:auto auto;column-gap:14px;min-height:210px;padding:20px 18px;align-items:center}
+  .feature-card,.feature-card:last-child{position:relative;grid-column:auto;display:grid;grid-template-columns:104px minmax(0,1fr);grid-template-rows:auto auto;column-gap:12px;min-height:180px;padding:13px 16px;align-items:center}
   .feature-top{display:none}
-  .feature-art{grid-column:1;grid-row:1/3;width:112px;min-height:160px}
-  .feature-card h3{grid-column:2;grid-row:1;align-self:end;font-size:20px;line-height:1.08;margin:0 0 9px}
-  .feature-card p{grid-column:2;grid-row:2;align-self:start;font-size:12px;line-height:1.5}
+  .feature-art{grid-column:1;grid-row:1/3;width:104px;min-height:132px;transform:scale(.9)}
+  .feature-card h3{grid-column:2;grid-row:1;align-self:end;font-size:20px;line-height:1.08;margin:0 0 7px}
+  .feature-card p{grid-column:2;grid-row:2;align-self:start;font-size:12px;line-height:1.45}
   .mini-photo{width:82px;height:98px;border-width:5px;font-size:34px}.mini-note{right:-2px;bottom:17px;padding:9px;font-size:10px}.mini-heart{left:1px;bottom:14px;font-size:23px}
   .mini-calendar{width:96px;height:112px;border-radius:14px}.mini-calendar b{padding:8px;font-size:9px}.mini-calendar strong{font-size:45px;margin-top:5px}.mini-bell{right:-2px;bottom:18px;width:48px;height:48px;font-size:23px}.mini-spark{left:0;top:28px;font-size:22px}
   .mini-chat{padding:14px 13px;border-radius:16px 16px 16px 4px;font-size:11px}.mini-avatar{right:-2px;bottom:21px;width:54px;height:54px;border-width:4px;font-size:27px}.mini-leaf{left:0;bottom:15px;font-size:28px}
