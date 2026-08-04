@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, MouseEvent, useState } from "react";
 
 const features = [
   {
@@ -66,7 +66,11 @@ function Mascot({ variant = "hero", pose = "heart" }: { variant?: "hero" | "smal
 function GardenArt() {
   return (
     <div className="garden-art" aria-hidden="true">
-      <div className="garden-message"><span>Little moments of care</span><strong>grow stronger connections.</strong></div>
+      <div className="garden-message">
+        <span>Little moments of care</span>
+        <strong>grow stronger connections.</strong>
+        <p>Made for busy people, introverts, long-distance friendships, old friendships, and families spread across generations.</p>
+      </div>
       <div className="sun" />
       <div className="cloud cloud-one" />
       <div className="cloud cloud-two" />
@@ -88,10 +92,15 @@ export default function Home() {
     setSubmitted(true);
   }
 
+  function scrollToHow(event: MouseEvent<HTMLAnchorElement>) {
+    event.preventDefault();
+    document.getElementById("how")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
   return (
     <main>
       <nav className="nav shell" aria-label="Main navigation">
-        <a href="#top" className="logo-link"><BloomMark /></a>
+        <a href="#top" className="logo-link"><BloomMark /><span className="nav-kicker">Your relationship garden</span></a>
         <button className="menu-button" aria-label="Toggle menu" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
           <span /><span />
         </button>
@@ -104,13 +113,11 @@ export default function Home() {
 
       <section className="hero shell" id="top">
         <div className="hero-copy">
-          <div className="eyebrow"><span>✿</span> Your relationship garden</div>
           <h1>Good relationships<br /><em>grow with care.</em></h1>
           <p>Bloom helps you remember the friends and family who matter most — and the little things that keep you close.</p>
           <div className="hero-actions">
-            <a href="#how" className="button button-primary">See how it works <span>↓</span></a>
+            <a href="#how" className="button button-primary" onClick={scrollToHow}>See how it works <span>↓</span></a>
           </div>
-          <p className="audience-note">Made for busy people, introverts, long-distance friendships, old friendships, and families spread across generations.</p>
           <p className="privacy-note"><span>♥</span> Private by design. Always yours.</p>
         </div>
         <GardenArt />
