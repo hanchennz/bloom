@@ -40,18 +40,11 @@ function BloomMark({ small = false }: { small?: boolean }) {
   );
 }
 
-function Mascot({ variant = "hero" }: { variant?: "hero" | "small" }) {
+function Mascot({ variant = "hero", pose = "heart" }: { variant?: "hero" | "small"; pose?: "water" | "heart" }) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
   return (
-    <div className={`mascot mascot-${variant}`} aria-hidden="true">
-      <div className="mascot-sprout"><i /><i /></div>
-      <div className="mascot-body">
-        <span className="eye eye-left" />
-        <span className="eye eye-right" />
-        <span className="smile" />
-        <span className="arm arm-left" />
-        <span className="arm arm-right" />
-      </div>
-      <div className="mascot-shadow" />
+    <div className={`mascot-image mascot-image-${variant}`} aria-hidden="true">
+      <img src={`${basePath}/mascot-${pose}.png`} alt="" />
     </div>
   );
 }
@@ -67,9 +60,7 @@ function GardenArt() {
       <div className="plant plant-right"><i /><i /><b /></div>
       <div className="flower flower-one"><span>●</span></div>
       <div className="flower flower-two"><span>●</span></div>
-      <Mascot />
-      <div className="watering-can"><span>♡</span><i /></div>
-      <div className="water-drops">•••</div>
+      <Mascot pose="water" />
     </div>
   );
 }
@@ -105,6 +96,7 @@ export default function Home() {
           <div className="hero-actions">
             <a href="#how" className="button button-primary">See how it works <span>↓</span></a>
           </div>
+          <p className="audience-note">Made for busy people, introverts, long-distance friendships, and old friendships.</p>
           <p className="privacy-note"><span>♥</span> Private by design. Always yours.</p>
         </div>
         <GardenArt />
@@ -114,7 +106,7 @@ export default function Home() {
         <div className="section-label"><span>01</span> Why Bloom?</div>
         <div className="intro-copy">
           <h2>Life gets busy.<br /><em>People still matter.</em></h2>
-          <p>We don’t drift apart because we stop caring. We forget a date, miss a follow-up, then wait too long to say hello. Bloom makes staying close feel simple again.</p>
+          <p>We don’t drift apart because we stop caring. Busy lives, quiet personalities, changing time zones, and years apart can make reaching out feel harder than it should. Bloom makes staying close feel simple again.</p>
         </div>
         <div className="love-note">
           <div className="tape" />
@@ -154,7 +146,7 @@ export default function Home() {
           <div className="app-topbar"><BloomMark small /><span>Tuesday, May 9</span><button aria-label="Notifications">♢</button></div>
           <div className="app-greeting">
             <div><span>TODAY IN YOUR GARDEN</span><h3>Three little ways<br />to show you care.</h3></div>
-            <Mascot variant="small" />
+            <Mascot variant="small" pose="heart" />
           </div>
           <div className="app-notes">
             {notes.map((note) => <div className="app-note" key={note.title}><span className={`note-icon note-icon-${note.tone}`}>{note.icon}</span><div><strong>{note.title}</strong><small>{note.meta}</small></div><b>›</b></div>)}
@@ -175,7 +167,7 @@ export default function Home() {
       </section>
 
       <section className="waitlist-wrap shell" id="waitlist">
-        <div className="waitlist-art" aria-hidden="true"><div className="giant-flower">✿</div><Mascot variant="small" /></div>
+        <div className="waitlist-art" aria-hidden="true"><div className="giant-flower">✿</div><Mascot variant="small" pose="heart" /></div>
         <div className="waitlist-copy">
           <span className="waitlist-kicker">Bloom is growing soon</span>
           <h2>Make a little more<br /><em>room for your people.</em></h2>
