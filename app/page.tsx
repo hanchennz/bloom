@@ -59,6 +59,7 @@ function Mascot({ variant = "hero" }: { variant?: "hero" | "small" }) {
 function GardenArt() {
   return (
     <div className="garden-art" aria-hidden="true">
+      <div className="garden-message"><span>Little moments of care</span><strong>grow stronger connections.</strong></div>
       <div className="sun" />
       <div className="cloud cloud-one" />
       <div className="cloud cloud-two" />
@@ -93,7 +94,6 @@ export default function Home() {
           <a href="#why" onClick={() => setMenuOpen(false)}>Why Bloom?</a>
           <a href="#how" onClick={() => setMenuOpen(false)}>How it works</a>
           <a href="#privacy" onClick={() => setMenuOpen(false)}>Privacy</a>
-          <a href="#waitlist" className="nav-cta" onClick={() => setMenuOpen(false)}>Join the waitlist <span>↗</span></a>
         </div>
       </nav>
 
@@ -103,18 +103,11 @@ export default function Home() {
           <h1>Good relationships<br /><em>grow with care.</em></h1>
           <p>Bloom helps you remember the people who matter most — and the little things that keep you close.</p>
           <div className="hero-actions">
-            <a href="#waitlist" className="button button-primary">Join the waitlist <span>↗</span></a>
-            <a href="#how" className="text-link">See how it works <span>↓</span></a>
+            <a href="#how" className="button button-primary">See how it works <span>↓</span></a>
           </div>
           <p className="privacy-note"><span>♥</span> Private by design. Always yours.</p>
         </div>
         <GardenArt />
-      </section>
-
-      <section className="care-strip" aria-label="Bloom philosophy">
-        <div className="marquee">
-          <span>Little moments of care</span><b>✿</b><span>Stronger connections</span><b>✦</b><span>Less guilt, more warmth</span><b>♡</b><span>Little moments of care</span><b>✿</b>
-        </div>
       </section>
 
       <section className="intro shell" id="why">
