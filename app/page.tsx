@@ -106,11 +106,11 @@ export default function Home() {
         <div className="hero-copy">
           <div className="eyebrow"><span>✿</span> Your relationship garden</div>
           <h1>Good relationships<br /><em>grow with care.</em></h1>
-          <p>Bloom helps you remember the people who matter most — and the little things that keep you close.</p>
+          <p>Bloom helps you remember the friends and family who matter most — and the little things that keep you close.</p>
           <div className="hero-actions">
             <a href="#how" className="button button-primary">See how it works <span>↓</span></a>
           </div>
-          <p className="audience-note">Made for busy people, introverts, long-distance friendships, and old friendships.</p>
+          <p className="audience-note">Made for busy people, introverts, long-distance friendships, old friendships, and families spread across generations.</p>
           <p className="privacy-note"><span>♥</span> Private by design. Always yours.</p>
         </div>
         <GardenArt />
@@ -120,7 +120,7 @@ export default function Home() {
         <div className="section-label"><span>01</span> Why Bloom?</div>
         <div className="intro-copy">
           <h2>Life gets busy.<br /><em>People still matter.</em></h2>
-          <p>We don’t drift apart because we stop caring. Busy lives, quiet personalities, changing time zones, and years apart can make reaching out feel harder than it should. Bloom makes staying close feel simple again.</p>
+          <p>We don’t drift apart because we stop caring. Busy lives, quiet personalities, changing time zones, and years apart can make reaching out feel harder than it should. Whether it’s an old friend across the world or relatives who live far away — like grandparents — Bloom makes staying close feel simple again.</p>
         </div>
         <div className="love-note">
           <div className="tape" />
@@ -204,7 +204,7 @@ export default function Home() {
       </section>
 
       <footer className="footer shell">
-        <div><BloomMark /><p>Helping people remember the people who matter most.</p></div>
+        <div><BloomMark /><p>Helping people stay close to the friends and family who matter most.</p></div>
         <div className="footer-links"><a href="#why">Why Bloom?</a><a href="#how">How it works</a><a href="#privacy">Privacy</a></div>
         <div className="footer-signoff"><span>Made with care</span><b>♥</b><small>© 2026 Bloom</small></div>
       </footer>
