@@ -128,8 +128,8 @@ export default function Home() {
           <span /><span />
         </button>
         <div className={`nav-links ${menuOpen ? "nav-links-open" : ""}`}>
-          <a href="#why" onClick={() => setMenuOpen(false)}>Why Bloom?</a>
-          <a href="#how" onClick={() => setMenuOpen(false)}>How it works</a>
+          <a href="#how" onClick={() => setMenuOpen(false)}>The feed</a>
+          <a href="#features" onClick={() => setMenuOpen(false)}>Features</a>
           <a href="#privacy" onClick={() => setMenuOpen(false)}>Privacy</a>
         </div>
       </nav>
@@ -146,21 +146,27 @@ export default function Home() {
         <GardenArt />
       </section>
 
-      <section className="intro shell" id="why">
-        <div className="section-label"><span>01</span> Why Bloom?</div>
+      <section className="intro shell" id="how">
+        <div className="section-label"><span>01</span> How the feed works</div>
         <div className="intro-copy">
-          <h2>Life gets busy.<br /><em>People still matter.</em></h2>
-          <p>We don’t drift apart because we stop caring. Busy lives, quiet personalities, changing time zones, and years apart can make reaching out feel harder than it should. Whether it’s an old friend across the world or relatives who live far away — like grandparents — Bloom makes staying close feel simple again.</p>
+          <h2>Your people,<br /><em>at a glance.</em></h2>
+          <p>Open Bloom to a calm list of friends and family you may want to catch up with. Set a different reminder rhythm for every person, see birthdays, anniversaries, and other special days coming up, and keep the details current as life changes.</p>
+          <ul className="feed-points">
+            <li>People to catch up with</li>
+            <li>Individual reminder frequency</li>
+            <li>Birthdays and anniversaries</li>
+            <li>A garden that grows with every bond</li>
+          </ul>
         </div>
         <div className="love-note">
           <div className="tape" />
           <span className="note-heart">♥</span>
-          <p>“Care doesn’t have to be constant to be meaningful.”</p>
+          <p>“As you tend each bond, your garden grows with it.”</p>
           <div className="note-flower">✿</div>
         </div>
       </section>
 
-      <section className="features shell" id="how">
+      <section className="features shell" id="features">
         {features.map((feature) => (
           <article className={`feature-card ${feature.className}`} key={feature.number}>
             <div className="feature-top"><span>{feature.number}</span><i>✦</i></div>
@@ -235,7 +241,7 @@ export default function Home() {
 
       <footer className="footer shell">
         <div><BloomMark /><p>Helping people stay close to the friends and family who matter most.</p></div>
-        <div className="footer-links"><a href="#why">Why Bloom?</a><a href="#how">How it works</a><a href="#privacy">Privacy</a></div>
+        <div className="footer-links"><a href="#how">How the feed works</a><a href="#privacy">Privacy</a><a href="#waitlist">Early access</a></div>
         <div className="footer-signoff"><span>Made with care</span><b>♥</b><small>© 2026 Bloom</small></div>
       </footer>
     </main>
