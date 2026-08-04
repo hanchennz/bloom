@@ -94,7 +94,30 @@ export default function Home() {
 
   function scrollToHow(event: MouseEvent<HTMLAnchorElement>) {
     event.preventDefault();
-    document.getElementById("how")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const target = document.getElementById("how");
+    if (!target) return;
+
+    const startY = window.scrollY;
+    const targetY = target.getBoundingClientRect().top + window.scrollY;
+    const distance = targetY - startY;
+    const duration = 1400;
+    const startTime = performance.now();
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      window.scrollTo(0, targetY);
+      return;
+    }
+
+    function animateScroll(now: number) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const eased = progress < 0.5
+        ? 4 * progress * progress * progress
+        : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+      window.scrollTo(0, startY + distance * eased);
+      if (progress < 1) requestAnimationFrame(animateScroll);
+    }
+
+    requestAnimationFrame(animateScroll);
   }
 
   return (
