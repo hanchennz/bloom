@@ -12,15 +12,15 @@ const features = [
   },
   {
     number: "02",
-    title: "Reach out at the right moment",
-    text: "Gentle reminders help you check in after the new job, before a birthday, or simply when it’s been a while.",
+    title: "Keep the story together",
+    text: "See calls, notes, milestones, and life updates in a private relationship timeline that grows richer over time.",
     className: "feature-lilac",
     art: "calendar",
   },
   {
     number: "03",
-    title: "Never wonder what to say",
-    text: "Thoughtful prompts pick up where you left off, so reconnecting feels natural — never awkward.",
+    title: "Bring your people with you",
+    text: "Import your closest contacts and organise friends and family without turning Bloom into another social network.",
     className: "feature-sage",
     art: "chat",
   },
@@ -128,8 +128,8 @@ export default function Home() {
           <span /><span />
         </button>
         <div className={`nav-links ${menuOpen ? "nav-links-open" : ""}`}>
-          <a href="#how" onClick={() => setMenuOpen(false)}>The feed</a>
-          <a href="#features" onClick={() => setMenuOpen(false)}>Features</a>
+          <a href="#how" onClick={() => setMenuOpen(false)}>How it works</a>
+          <a href="#feed" onClick={() => setMenuOpen(false)}>The feed</a>
           <a href="#privacy" onClick={() => setMenuOpen(false)}>Privacy</a>
         </div>
       </nav>
@@ -141,28 +141,15 @@ export default function Home() {
           <div className="hero-actions">
             <a href="#how" className="button button-primary" onClick={scrollToHow}>See how it works <span>↓</span></a>
           </div>
-          <p className="privacy-note"><span>♥</span> Private by design. Always yours.</p>
         </div>
         <GardenArt />
       </section>
 
-      <section className="intro shell" id="how">
-        <div className="section-label"><span>01</span> How the feed works</div>
+      <section className="feature-intro shell" id="how">
+        <div className="section-label"><span>01</span> What Bloom helps with</div>
         <div className="intro-copy">
-          <h2>Your people,<br /><em>at a glance.</em></h2>
-          <p>Open Bloom to a calm list of friends and family you may want to catch up with. Set a different reminder rhythm for every person, see birthdays, anniversaries, and other special days coming up, and keep the details current as life changes.</p>
-          <ul className="feed-points">
-            <li>People to catch up with</li>
-            <li>Individual reminder frequency</li>
-            <li>Birthdays and anniversaries</li>
-            <li>A garden that grows with every bond</li>
-          </ul>
-        </div>
-        <div className="love-note">
-          <div className="tape" />
-          <span className="note-heart">♥</span>
-          <p>“As you tend each bond, your garden grows with it.”</p>
-          <div className="note-flower">✿</div>
+          <h2>Thoughtful tools.<br /><em>More natural connection.</em></h2>
+          <p>Save the details you care about, keep a relationship history, bring in your closest people, schedule a real catch-up, and capture thoughts by voice.</p>
         </div>
       </section>
 
@@ -183,18 +170,21 @@ export default function Home() {
         ))}
       </section>
 
-      <section className="product shell">
+      <section className="product shell" id="feed">
         <div className="product-copy">
-          <div className="section-label light"><span>02</span> A calmer way to stay close</div>
-          <h2>A gentle nudge.<br /><em>Never a guilt trip.</em></h2>
-          <p>Open Bloom to a quiet daily view of the people who might appreciate hearing from you. No feeds, no streaks, no pressure.</p>
+          <div className="section-label light"><span>02</span> How the feed works</div>
+          <h2>Your people,<br /><em>at a glance.</em></h2>
+          <p>Open Bloom to a calm, private list of friends and family you may want to catch up with. The feed adapts to each relationship and helps you notice the moments that matter.</p>
           <ul>
-            <li><span>✓</span> Thoughtful, contextual reminders</li>
-            <li><span>✓</span> Private notes and memories</li>
-            <li><span>✓</span> Birthdays and life milestones</li>
-            <li><span>✓</span> Catch-up polls with Google Calendar</li>
-            <li><span>✓</span> Voice-to-text note taking</li>
+            <li><span>✓</span> A personalized list of people to catch up with</li>
+            <li><span>✓</span> A different reminder frequency for each person</li>
+            <li><span>✓</span> Upcoming birthdays, anniversaries, and special days</li>
+            <li><span>✓</span> A visual garden that grows as bonds strengthen</li>
           </ul>
+          <div className="context-note">
+            <strong>Prompts that understand the relationship</strong>
+            <p>For grandparents, Bloom might suggest asking about their health, hearing a family story, or seeking life advice. For friends, it can surface the anniversary of a big trip or graduation. For people with children, it can suggest conversation starters about the kids.</p>
+          </div>
         </div>
         <div className="app-window" aria-label="Bloom app preview">
           <div className="app-topbar"><BloomMark small /><span>Tuesday, May 9</span><button aria-label="Notifications">♢</button></div>
@@ -241,8 +231,9 @@ export default function Home() {
 
       <footer className="footer shell">
         <div><BloomMark /><p>Helping people stay close to the friends and family who matter most.</p></div>
-        <div className="footer-links"><a href="#how">How the feed works</a><a href="#privacy">Privacy</a><a href="#waitlist">Early access</a></div>
+        <div className="footer-links"><a href="#how">How it works</a><a href="#feed">The feed</a><a href="#waitlist">Early access</a></div>
         <div className="footer-signoff"><span>Made with care</span><b>♥</b><small>© 2026 Bloom</small></div>
+        <p className="footer-privacy"><span>♥</span> Private by design. Always yours.</p>
       </footer>
     </main>
   );
