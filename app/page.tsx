@@ -24,6 +24,20 @@ const features = [
     className: "feature-sage",
     art: "chat",
   },
+  {
+    number: "04",
+    title: "Find a time that works",
+    text: "Send a simple time-slot survey, choose the best catch-up time together, and add it straight to Google Calendar — with gentle reminders for everyone.",
+    className: "feature-apricot",
+    art: "schedule",
+  },
+  {
+    number: "05",
+    title: "Capture notes by voice",
+    text: "Speak naturally after a call and Bloom turns your thoughts into private notes, memories, and useful follow-ups.",
+    className: "feature-blue",
+    art: "voice",
+  },
 ];
 
 const notes = [
@@ -124,6 +138,8 @@ export default function Home() {
               {feature.art === "memory" && <><div className="mini-photo">☺</div><div className="mini-note">coffee<br />&amp; long walks</div><span className="mini-heart">♥</span></>}
               {feature.art === "calendar" && <><div className="mini-calendar"><b>MAY</b><strong>10</strong></div><div className="mini-bell">♢</div><span className="mini-spark">✦</span></>}
               {feature.art === "chat" && <><div className="mini-chat">How did the<br />big move go?</div><div className="mini-avatar">☺</div><span className="mini-leaf">❧</span></>}
+              {feature.art === "schedule" && <><div className="mini-slots"><span>9:30 am</span><span>12:00 pm</span><span>6:30 pm</span></div><div className="mini-calendar-sync"><b>CAL</b><span>✓</span></div></>}
+              {feature.art === "voice" && <><div className="mini-mic">●</div><div className="mini-wave"><i /><i /><i /><i /><i /></div><div className="mini-transcript">“Ask Maya about<br />the move in June…”</div></>}
             </div>
             <h3>{feature.title}</h3>
             <p>{feature.text}</p>
@@ -140,6 +156,8 @@ export default function Home() {
             <li><span>✓</span> Thoughtful, contextual reminders</li>
             <li><span>✓</span> Private notes and memories</li>
             <li><span>✓</span> Birthdays and life milestones</li>
+            <li><span>✓</span> Catch-up polls with Google Calendar</li>
+            <li><span>✓</span> Voice-to-text note taking</li>
           </ul>
         </div>
         <div className="app-window" aria-label="Bloom app preview">
