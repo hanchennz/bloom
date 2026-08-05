@@ -63,13 +63,14 @@ function Mascot({ variant = "hero", pose = "heart" }: { variant?: "hero" | "smal
   );
 }
 
-function GardenArt() {
+function GardenArt({ onHowClick }: { onHowClick: (event: MouseEvent<HTMLAnchorElement>) => void }) {
   return (
-    <div className="garden-art" aria-hidden="true">
+    <div className="garden-art">
+      <a href="#how" className="button button-primary garden-cta" onClick={onHowClick}>
+        See how it works <span aria-hidden="true">↓</span>
+      </a>
       <div className="garden-message">
-        <span>Little moments of care</span>
-        <strong>grow stronger connections.</strong>
-        <p>Made for busy people, introverts, long-distance friendships, old friendships, and families spread across generations.</p>
+        <p>Made for busy lives, introverts, old friends and family, near and far.</p>
       </div>
       <div className="sun" />
       <div className="cloud cloud-one" />
@@ -138,11 +139,8 @@ export default function Home() {
         <div className="hero-copy">
           <h1>Good relationships<br /><em>grow with care.</em></h1>
           <p>Bloom helps you remember the friends and family who matter most — and the little things that keep you close.</p>
-          <div className="hero-actions">
-            <a href="#how" className="button button-primary" onClick={scrollToHow}>See how it works <span>↓</span></a>
-          </div>
         </div>
-        <GardenArt />
+        <GardenArt onHowClick={scrollToHow} />
       </section>
 
       <section className="feature-intro shell" id="how">
