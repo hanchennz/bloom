@@ -66,11 +66,13 @@ function Mascot({ variant = "hero", pose = "heart" }: { variant?: "hero" | "smal
 function GardenArt({ onHowClick }: { onHowClick: (event: MouseEvent<HTMLAnchorElement>) => void }) {
   return (
     <div className="garden-art">
-      <a href="#how" className="button button-primary garden-cta" onClick={onHowClick}>
-        See how it works <span aria-hidden="true">↓</span>
-      </a>
-      <div className="garden-message">
-        <p>Made for busy lives, introverts, old friends and family, near and far.</p>
+      <div className="garden-copy">
+        <div className="garden-message">
+          <p>Made for busy lives, introverts, old friends and family, near and far.</p>
+        </div>
+        <a href="#how" className="button button-primary garden-cta" onClick={onHowClick}>
+          See how it works <span aria-hidden="true">↓</span>
+        </a>
       </div>
       <div className="sun" />
       <div className="cloud cloud-one" />
